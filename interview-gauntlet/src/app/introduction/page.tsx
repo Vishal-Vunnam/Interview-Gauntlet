@@ -44,7 +44,8 @@ export default function IntroductionPage() {
       setCurrentQuestion(currentQuestion + 1);
       setTypedText("");
     } else {
-      router.push("/interview");
+      const params = new URLSearchParams(formData).toString();
+      router.push(`/interview?${params}`);
     }
   };
 
